@@ -1,5 +1,5 @@
 <template>
-  <div class="relative flex overflow-hidden w-screenh-screen">
+  <div class="relative flex w-screen h-screen overflow-hidden">
     <div>
       <div class="absolute z-0 w-full h-full">
         <div class="slide-bl">
