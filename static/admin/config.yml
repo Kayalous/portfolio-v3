@@ -1,0 +1,111 @@
+backend:
+  name: proxy
+  proxy_url: http://localhost:8081/api/v1
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "global"
+    label: "Global"
+    folder: "content/global"
+    format: "frontmatter"
+    create: false
+    editor:
+      preview: false
+    fields:
+      - { label: "Global Settings", name: "title", widget: "string" }
+      - { label: "Email", name: "email", widget: "string" }
+      - label: "Footer Links"
+        label_singular: "Footer Link"
+        name: "footerlinks"
+        widget: "list"
+        collapsed: true
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "URL", name: "url", widget: "string" }
+          - { label: "icon", name: "icon", widget: "markdown" }
+
+  - name: "home"
+    label: "Home"
+    folder: "content/pages"
+    format: "frontmatter"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Home", name: "title", widget: "string" }
+      - { label: "Bio Header", name: "header", widget: "string" }
+      - { label: "Bio", name: "bio", widget: "markdown" }
+      - { label: "Contact", name: "contact", widget: "markdown" }
+
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    format: "frontmatter"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body", name: "content", widget: "markdown" }
+
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    format: "frontmatter"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body", name: "content", widget: "markdown" }
+      - label: "Project Categories"
+        name: "categories"
+        widget: "relation"
+        multiple: true
+        required: false
+        collection: "categories"
+        search_fields: ["title"]
+        value_field: "{{title}}*/*{{color}}"
+        display_fields: ["title"]
+      - label: "Project Technologies"
+        name: "technologies"
+        widget: "relation"
+        multiple: true
+        required: false
+        collection: "technologies"
+        search_fields: ["title"]
+        value_field: "title"
+        display_fields: ["title"]
+
+  - name: "categories"
+    label: "Categories"
+    folder: "content/categories"
+    format: "frontmatter"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Color", name: "color", widget: "string" }
+
+  - name: "technologies"
+    label: "Technologies"
+    folder: "content/technologies"
+    format: "frontmatter"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
