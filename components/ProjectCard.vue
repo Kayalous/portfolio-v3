@@ -14,7 +14,7 @@
       />
     </nuxt-link>
     <div
-      class="flex flex-col justify-between p-4 my-auto transition duration-700 -translate-y-1 rounded-md rounded-t-none shadow-md  glass md:translate-y-0 md:rounded-t-md transform-gpu ease-overstep"
+      class="flex flex-col justify-between w-full p-4 my-auto transition duration-700 -translate-y-1 rounded-md rounded-t-none shadow-md  glass md:translate-y-0 md:rounded-t-md transform-gpu ease-overstep"
       :class="[
         reverse
           ? 'md:group-hover:translate-x-12 md:translate-x-16'
@@ -28,7 +28,7 @@
           </h3>
         </nuxt-link>
         <div
-          class="flex flex-row gap-4 py-2"
+          class="flex flex-row flex-wrap gap-4 py-2"
           v-if="project.categories.length > 0"
         >
           <span

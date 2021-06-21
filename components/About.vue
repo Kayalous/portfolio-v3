@@ -7,7 +7,7 @@
       >
         Get to know me better
       </h1>
-      <h2 class="text-6xl tracking-tight text-center">
+      <h2 class="text-4xl tracking-tight text-center sm:text-6xl">
         {{ about.header }}
       </h2>
       <div class="w-full mt-2 text-gray-600 dark:text-dark-theme-300">

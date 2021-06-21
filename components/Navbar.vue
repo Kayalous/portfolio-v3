@@ -5,24 +5,50 @@
     <div
       class="
         flex
-        px-5
-        mx-5
+        px-1
+        sm:px-5
+        mx-2
+        sm:mx-5
         my-2
         !transition-all
         !duration-300
         rounded-md
         flex-nowrap
         glass
-        tinted
         shadow-sm
       "
     >
-      <div class="w-[48px] h-[48px]"></div>
+      <transition name="fade-in-down">
+        <NuxtLink
+          class="
+            hidden
+            absolute
+            text-xl
+            top-[50%]
+            translate-y-[-50%]
+            md:inline
+            font-semibold
+            transition
+            duration-500
+            transform
+            whitespace-nowrap
+            ease-overstep
+            hover-no-underline
+            z-50
+          "
+          v-if="home"
+          to="/"
+          :key="'back'"
+        >
+          &#60; Back to home</NuxtLink
+        >
+      </transition>
+      <div class="w-10 h-10 sm:h-12 sm:w-12"></div>
       <div
-        class="relative flex flex-row items-center justify-between flex-grow w-full py-4 "
+        class="relative flex flex-row items-center justify-between flex-grow w-full py-2 "
       >
         <nav
-          class="flex flex-row items-center justify-center flex-grow ml-auto  gap-x-5"
+          class="flex flex-row items-center justify-center flex-grow ml-auto  gap-x-5 sm:gap-x-10"
         >
           <NuxtLink class="font-semibold sm:text-xl" to="/blogs/"
             >Writings</NuxtLink
@@ -33,7 +59,7 @@
             to="/"
           >
             <svg
-              class="w-12 h-12 sm:w-16 sm:h-16"
+              class="w-10 h-10 sm:w-16 sm:h-16"
               viewBox="0 0 25 17"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +77,7 @@
       </div>
       <button
         @click="toggleTheme()"
-        class="inline h-12 p-1 my-auto overflow-hidden transition-all duration-200 rounded-md  hover:brightness-125 hover-no-underline focus:outline-none text-rose-400"
+        class="inline p-1 my-auto overflow-hidden transition-all duration-200 rounded-md  h-14 hover:brightness-125 hover-no-underline focus:outline-none text-rose-400"
       >
         <transition name="spin-grow" mode="out-in">
           <svg
@@ -59,9 +85,7 @@
             key="light"
             v-if="checkTheme('light')"
             xmlns="http://www.w3.org/2000/svg"
-            class="stroke-current icon icon-tabler icon-tabler-sun"
-            width="44"
-            height="44"
+            class="w-10 h-10 stroke-current  sm:h-12 sm:w-12 icon icon-tabler icon-tabler-sun"
             viewBox="0 0 24 24"
             stroke-width="1.5"
             fill="none"
@@ -80,9 +104,7 @@
             key="dark"
             v-if="checkTheme('dark')"
             xmlns="http://www.w3.org/2000/svg"
-            class="stroke-current icon icon-tabler icon-tabler-moon-stars"
-            width="44"
-            height="44"
+            class="w-10 h-10 stroke-current  sm:h-12 sm:w-12 icon icon-tabler icon-tabler-moon-stars"
             viewBox="0 0 24 24"
             stroke-width="1.5"
             fill="none"
@@ -166,7 +188,7 @@ export default {
   @apply opacity-0 -translate-y-full;
 }
 .fade-in-down-enter-to {
-  @apply opacity-100 translate-y-0;
+  @apply opacity-100 translate-y-[-50%];
 }
 
 .fade-in-down-leave-to {

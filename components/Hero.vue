@@ -47,12 +47,12 @@
             Hey, my name is
           </h1>
           <h2
-            class="text-6xl tracking-tight text-center  2xl:text-8xl md:text-left"
+            class="text-4xl tracking-tight text-center  sm:text-6xl 2xl:text-8xl md:text-left"
           >
             Abdulrhman Elkayal.
           </h2>
           <h2
-            class="mb-5 text-6xl tracking-tight text-center  2xl:text-8xl md:text-left"
+            class="mb-5 text-4xl tracking-tight text-center  sm:text-6xl 2xl:text-8xl md:text-left"
           >
             I make things.
           </h2>

@@ -6,7 +6,9 @@
       >
         Writing
       </h1>
-      <h2 class="mb-5 text-6xl tracking-tight text-center md:text-left">
+      <h2
+        class="mb-5 text-4xl tracking-tight text-center  sm:text-6xl md:text-left"
+      >
         Some of my writings
       </h2>
       <div class="flex flex-wrap mb-12 text-left gap-y-12">
