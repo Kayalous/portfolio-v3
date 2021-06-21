@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-transparent">
+  <div class="relative z-50 bg-transparent">
     <div
       class="fixed bottom-0 z-50 items-start justify-between hidden w-full h-0  lg:flex"
     >
