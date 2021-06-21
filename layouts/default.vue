@@ -52,8 +52,6 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;800&family=Fira+Sans+Extra+Condensed:wght@600;900&family=Josefin+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap");
-
 * {
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;

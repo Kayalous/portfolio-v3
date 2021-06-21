@@ -11,7 +11,8 @@ export default {
       { hid: 'description', name: 'description', content: 'A personal portfolio for Abdulrhman Elkyal.' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;800&family=Fira+Sans+Extra+Condensed:wght@600;900&family=Josefin+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap' }
     ]
   },
 
