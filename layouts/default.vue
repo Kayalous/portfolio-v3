@@ -303,29 +303,29 @@ a:not([href*="elkayal.me"]):not(.hover-no-underline):not([href^="#"]):not([href^
 }
 
 .category-green {
-  @apply !text-green-700 !bg-green-200;
+  @apply !text-green-700 !bg-green-100;
 }
 .category-purple {
-  @apply !text-purple-700 !bg-purple-200;
+  @apply !text-purple-700 !bg-purple-100;
 }
 .category-red {
-  @apply !text-red-700 !bg-red-200;
+  @apply !text-red-700 !bg-red-100;
 }
 .category-blue {
-  @apply !text-blue-700 !bg-blue-200;
+  @apply !text-blue-700 !bg-blue-100;
 }
 .category-rose {
   @apply !text-rose-400 !bg-rose-100;
 }
 .sqaure-1 {
   transform: rotate(30deg);
-  -webkit-animation: sqaure-1 60s ease infinite, fade-in 5s 3s both;
-  animation: sqaure-1 60s ease infinite, fade-in 5s 3s both;
+  -webkit-animation: sqaure-1 60s ease infinite, fade-in 5s 1s both;
+  animation: sqaure-1 60s ease infinite, fade-in 5s 1s both;
 }
 .sqaure-2 {
   transform: rotate(45deg);
-  -webkit-animation: sqaure-1 90s ease infinite, fade-in 8s 2s both;
-  animation: sqaure-1 90s ease infinite, fade-in 8s 2s both;
+  -webkit-animation: sqaure-1 90s ease infinite, fade-in 8s 0.5s both;
+  animation: sqaure-1 90s ease infinite, fade-in 8s 0.5s both;
 }
 
 .fade-in {

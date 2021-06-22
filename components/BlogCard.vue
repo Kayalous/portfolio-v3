@@ -2,7 +2,8 @@
   <div class="w-full p-2 mx-auto sm:p-6 md:w-1/2 xl:w-1/3 h-96">
     <div class="relative h-full">
       <nuxt-link :to="`blog/${blog.slug}`">
-        <img
+        <nuxt-img
+          quality="80"
           class="object-cover w-full h-full transition-all duration-200 rounded-md shadow-md  ease-overstep"
           :src="blog.image"
           alt="blog"

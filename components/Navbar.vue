@@ -54,6 +54,7 @@
             >Writings</NuxtLink
           >
           <NuxtLink
+            aria-label="Logo"
             class="font-semibold hover-no-underline"
             style="filter: drop-shadow(0px 0px 3px #fb7185aa)"
             to="/"
@@ -76,6 +77,7 @@
         </nav>
       </div>
       <button
+        aria-label="Theme toggler"
         @click="toggleTheme()"
         class="inline p-1 my-auto overflow-hidden transition-all duration-200 rounded-md  h-14 hover:brightness-125 hover-no-underline focus:outline-none text-rose-400"
       >

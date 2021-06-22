@@ -13,6 +13,7 @@
             :key="footerLink.name"
           >
             <a
+              :aria-label="footerLink.name"
               :href="footerLink.url"
               target="_blank"
               rel="noopener noreferrer"

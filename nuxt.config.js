@@ -34,6 +34,8 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/moment',
+    '@nuxt/image',
+
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -44,6 +46,9 @@ export default {
     '@nuxtjs/pwa',
 
     '@nuxt/content',
+
+    '@nuxt/image',
+
 
   ],
 

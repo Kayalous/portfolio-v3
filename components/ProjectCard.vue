@@ -7,7 +7,10 @@
       :to="'project/' + project.slug"
       class="relative flex-shrink-0 w-full transition duration-700  md:w-6/12 hover-no-underline transform-gpu ease-overstep md:group-hover:scale-101"
     >
-      <img
+      <nuxt-img
+        width="560"
+        height="360"
+        quality="80"
         :alt="project.title"
         :src="project.image"
         class="w-full h-auto rounded-md shadow-lg"
