@@ -6,9 +6,9 @@ A personal portfolio for Abdulrhman Elkyal.
 
 ## Important information
 
-This is my personal portfolio website, if you feel like using it for your own portfolio feel free to do so! But please make sure to give me attribution by linking to this repo, or to my website, [Personal website](https://www.elkayal.me "elkayal.me").
+This is my personal portfolio website, if you feel like using it for your own portfolio feel free to do so! But please make sure to give me attribution by linking to this repo, or to my website, [elkayal.me](https://www.elkayal.me "Personal website").
 
-Some inspiration was drawn from [Brittany Chiang's website](https://brittanychiang.com/ "Brittany Chiang's awesome portfolio"), as well as many other talented designers/developers, with my own touch thrown in there of course.
+Some inspiration was drawn from [Brittany Chiang's awesome portfolio](https://brittanychiang.com/ "Brittany Chiang's website"), as well as many other talented designers/developers, with my own touch thrown in there of course.
 
 ## Build Setup
 
