@@ -10,7 +10,7 @@
     ]"
   >
     <nuxt-link
-      :to="'project/' + project.slug"
+      :to="'/project/' + project.slug"
       class="relative flex-shrink-0 w-full overflow-hidden transition-all duration-700  hover-no-underline transform-gpu ease-overstep"
       :class="
         compact
@@ -38,7 +38,7 @@
       ]"
     >
       <div>
-        <nuxt-link :to="'project/' + project.slug">
+        <nuxt-link :to="'/project/' + project.slug">
           <h3 class="inline-block text-3xl font-semibold">
             {{ project.title }}
           </h3>
@@ -180,7 +180,7 @@
               </span>
             </a>
           </div>
-          <nuxt-link :to="'project/' + project.slug" :title="project.title">
+          <nuxt-link :to="'/project/' + project.slug" :title="project.title">
             Case study »
           </nuxt-link>
         </div>

@@ -1,7 +1,7 @@
 <template>
   <div class="w-full p-2 m-auto sm:p-6 h-96">
     <div class="relative h-full">
-      <nuxt-link :to="`article/${blog.slug}`">
+      <nuxt-link :to="`/article/${blog.slug}`">
         <nuxt-img
           class="object-cover w-full h-full transition-all duration-200 rounded-md shadow-md  ease-overstep"
           :src="blog.image"
@@ -19,7 +19,7 @@
           </p>
           <div class="flex">
             <nuxt-link
-              :to="`article/${blog.slug}`"
+              :to="`/article/${blog.slug}`"
               class="mb-2 text-xs font-semibold tracking-widest uppercase  line-clamp-1 title-font text-rose-400"
             >
               {{ blog.title }}
@@ -33,7 +33,7 @@
         </div>
         <div class="flex justify-end px-6 py-4 mt-auto">
           <nuxt-link
-            :to="`article/${blog.slug}`"
+            :to="`/article/${blog.slug}`"
             class="mt-auto font-semibold lg:mb-0"
             title="Read Full Article"
           >
