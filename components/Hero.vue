@@ -1,5 +1,15 @@
 <template>
-  <section class="relative z-10 w-screen h-screen max-h-screen overflow-hidden">
+  <section
+    class="
+      relative
+      z-10
+      w-screen
+      h-screen
+      min-h-[800px]
+      max-h-screen
+      overflow-hidden
+    "
+  >
     <div>
       <div class="absolute z-0 w-full h-full">
         <div class="slide-bl">
@@ -13,7 +23,7 @@
           ></div>
         </div>
       </div>
-      <div class="absolute w-screen h-screen glass no-tint fade-in"></div>
+      <div class="absolute w-screen h-full glass no-tint fade-in"></div>
       <!-- <div
         class="absolute bottom-0 left-0 z-10 w-full h-20 xl:h-32 bg-gradient-to-t from-white dark:from-dark-theme-900 to-transparent smooth-seperator"
       ></div> -->
@@ -36,7 +46,7 @@
           items-center
           justify-start
           h-screen
-          !min-h-[600px]
+          !min-h-[800px]
           px-5
         "
       >
@@ -73,6 +83,8 @@
                 ease-overstep
                 active:translate-y-0.5
               "
+              target="_blank"
+              rel="noopener noreferrer"
               href="mailto:aelkayal88@gmail.com"
             >
               <span
@@ -87,15 +99,3 @@
     </div>
   </section>
 </template>
-
-<style>
-.smooth-seperator {
-  -webkit-animation: fade-in 1s 1s;
-  animation: fade-in 1s 1s;
-}
-
-.dark .smooth-seperator {
-  -webkit-animation: fade-in 1s 1s;
-  animation: fade-in 1s 1s;
-}
-</style>

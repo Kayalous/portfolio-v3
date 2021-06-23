@@ -1,6 +1,6 @@
 <template>
-  <section class="px-1 pt-32">
-    <div class="flex flex-col items-center justify-center w-full mb-10">
+  <section class="px-2 pt-24 sm:pt-40">
+    <div class="flex flex-col items-center justify-center w-full mb-16">
       <h1
         class="text-2xl font-semibold tracking-tight text-center  text-rose-400 font-josefin"
       >
@@ -42,77 +42,34 @@
         </a>
       </div>
     </div>
-    <div class="flex flex-wrap justify-center max-w-5xl mx-auto xl:max-w-7xl">
-      <div
-        class="p-3 xl:w-1/3 md:w-1/2"
+    <div
+      class="grid max-w-5xl grid-cols-1 gap-5 mx-auto  md:grid-cols-2 xl:max-w-7xl"
+    >
+      <ProjectCard
         v-for="project in projects"
         :key="project.title"
-      >
-        <div class="bg-gray-100 rounded-lg dark:bg-dark-theme-800">
-          <nuxt-link :to="`project/${project.slug}`">
-            <img
-              class="object-cover object-center w-full h-64 mb-6 transition duration-200 rounded  ease-overstep"
-              :src="project.image"
-              alt="content"
-            />
-          </nuxt-link>
-          <div class="px-6 py-6">
-            <div
-              class="flex flex-row flex-wrap gap-4 py-2 mb-2"
-              v-if="project.categories.length > 0"
-            >
-              <span
-                v-for="category in project.categories"
-                :key="category.title"
-                class="
-                  px-1.5
-                  text-sm
-                  font-bold
-                  tracking-tight
-                  uppercase
-                  rounded-full
-                  select-none
-                "
-                :class="[category.color]"
-              >
-                {{ category.title }}
-              </span>
-            </div>
-            <nuxt-link
-              :to="`project/${project.slug}`"
-              class="mb-4 text-lg font-medium title-font"
-            >
-              {{ project.title }}
-            </nuxt-link>
-            <p class="text-base leading-relaxed font-josefin">
-              {{ project.description }}
-            </p>
-            <div
-              v-if="project.technologies.length > 0"
-              class="flex flex-wrap w-full py-1 mt-2 text-gray-600  dark:text-dark-theme-400 font-Dosis"
-            >
-              <span
-                class="mx-2 font-semibold"
-                v-for="technology in project.technologies"
-                :key="technology"
-              >
-                {{ technology }}
-              </span>
-            </div>
-            <div class="flex justify-end mt-5">
-              <nuxt-link :to="'project/' + project.slug" :title="project.title">
-                View project »
-              </nuxt-link>
-            </div>
-          </div>
-        </div>
-      </div>
+        :project="project"
+        compact="true"
+      />
     </div>
   </section>
 </template>
 
 <script>
 export default {
+  head() {
+    return {
+      title: "Projects | Abdulrhman Elkayal",
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: "description",
+          name: "description",
+          content: "Some projects of Abdulrhman Elkayal.",
+        },
+      ],
+    };
+  },
   async asyncData({ $content, params }) {
     const projects = await $content("projects").fetch();
 

@@ -67,6 +67,18 @@ collections:
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
+      - {
+          label: "Preview Link",
+          name: "link",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Github Repo",
+          name: "githublink",
+          widget: "string",
+          required: false,
+        }
       - { label: "Body", name: "content", widget: "markdown" }
       - label: "Project Categories"
         name: "categories"

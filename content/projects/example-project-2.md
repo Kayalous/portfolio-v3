@@ -8,6 +8,9 @@ description: This episode is why I love Matt as a DM. He knows his players are
   friendly faces and things for his friends to be excited about. He knows what
   his players, and what's more his friends, need in order to keep things fun for
   everyone. Amazing DM'ing
+link: https://www.aboelkhier.com
+githublink: https://www.github.com/kayalous
+content: Hello 2
 categories:
   - Backend*/*category-purple
   - Frontend*/*category-blue

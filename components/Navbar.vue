@@ -50,7 +50,7 @@
         <nav
           class="flex flex-row items-center justify-center flex-grow ml-auto  gap-x-5 sm:gap-x-10"
         >
-          <NuxtLink class="font-semibold sm:text-xl" to="/blogs/"
+          <NuxtLink class="font-semibold sm:text-xl" to="/writings/"
             >Writings</NuxtLink
           >
           <NuxtLink

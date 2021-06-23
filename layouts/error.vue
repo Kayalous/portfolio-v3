@@ -28,9 +28,16 @@
         </h1>
 
         <p
+          v-if="error.statusCode === 404"
           class="mb-10 text-lg text-center text-gray-600  font-josefin 2xl:text-2xl dark:text-dark-theme-200"
         >
           “Sometimes it takes a wrong turn to get you to the right place.”
+        </p>
+        <p
+          v-else
+          class="mb-10 text-lg text-center text-gray-600  font-josefin 2xl:text-2xl dark:text-dark-theme-200"
+        >
+          “To err is human, to forgive, divine.”
         </p>
         <div class="flex justify-center">
           <nuxt-link

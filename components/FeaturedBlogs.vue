@@ -11,7 +11,9 @@
       >
         Some of my writings
       </h2>
-      <div class="flex flex-wrap mb-12 text-left gap-y-12">
+      <div
+        class="grid w-full grid-cols-1 mb-12 text-left  md:grid-cols-2 xl:grid-cols-3 gap-y-12"
+      >
         <BlogCard :blog="blog" v-for="blog in blogs" :key="blog.title" />
       </div>
       <div class="flex items-center justify-center w-full">
@@ -25,7 +27,7 @@
             ease-overstep
             active:translate-y-0.5
           "
-          to="/blogs"
+          to="/writings"
         >
           <span
             class="rose-button glass transform-gpu group-hover:-translate-y-1"
