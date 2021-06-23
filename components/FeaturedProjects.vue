@@ -9,7 +9,7 @@
       <h2
         class="mb-5 text-4xl tracking-tight text-center  sm:text-6xl md:text-left"
       >
-        Somethings I've built
+        Stuff I've made
       </h2>
     </div>
     <div class="max-w-6xl mx-auto 2xl:max-w-none 2xl:container">
