@@ -308,13 +308,13 @@ export default {
         ...vm.formData,
       };
       const axiosConfig = {
+        method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: qs.stringify(formData),
       };
 
       // Form request
-      axios
-        .post("/", axiosConfig)
+      fetch("/", axiosConfig)
         .then(() => vm.success())
         .catch(() => vm.error());
     },
