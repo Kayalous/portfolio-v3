@@ -9,7 +9,7 @@
         <ul class="flex flex-col gap-1">
           <li
             class="group"
-            v-for="footerLink in globalData.footerlinks"
+            v-for="footerLink in $store.state.global.data.footerlinks"
             :key="footerLink.name"
           >
             <a
@@ -43,8 +43,8 @@
         <div class="group">
           <a
             class="p-0 m-0 text-xl transition  hover-no-underline transform-gpu duration-400 ease-overstep group-hover:-translate-y-1 email-vertical"
-            :href="'mailto:' + globalData.email"
-            >{{ globalData.email }}</a
+            :href="'mailto:' + $store.state.global.data.email"
+            >{{ $store.state.global.data.email }}</a
           >
         </div>
         <div
@@ -65,7 +65,7 @@
       <ul class="flex gap-5 mb-5 lg:hidden">
         <li
           class="group"
-          v-for="footerLink in globalData.footerlinks"
+          v-for="footerLink in $store.state.global.data.footerlinks"
           :key="footerLink.name"
         >
           <a
@@ -80,7 +80,7 @@
         </li>
         <li class="group">
           <a
-            :href="'mailto:' + globalData.email"
+            :href="'mailto:' + $store.state.global.data.email"
             target="_blank"
             rel="noopener noreferrer"
             class="flex flex-row items-center gap-2 py-1 transition  hover-no-underline transform-gpu duration-400 ease-overstep group-hover:-translate-y-1"
@@ -117,12 +117,7 @@
 <script>
 export default {
   data() {
-    return {
-      globalData: {},
-    };
-  },
-  async mounted() {
-    this.globalData = await this.$content("global/global-settings").fetch();
+    return {};
   },
 };
 </script>

@@ -11,12 +11,15 @@
         sm:mx-5
         my-2
         !transition-all
-        !duration-300
+        !duration-350
         rounded-md
         flex-nowrap
         glass
         shadow-sm
+        transform
+        !ease-overstep
       "
+      :class="[showNavbar ? '' : '-translate-y-24 ']"
     >
       <transition name="fade-in-down">
         <NuxtLink
@@ -131,8 +134,20 @@
 
 <script>
 export default {
+  created() {
+    if (process.browser) window.addEventListener("scroll", this.handleScroll);
+  },
+
+  beforeDestroy() {
+    if (process.browser)
+      window.removeEventListener("scroll", this.handleScroll);
+  },
   data() {
-    return {};
+    return {
+      showNavbar: true,
+      lastYpos: 0,
+      offsetTrigger: 10,
+    };
   },
   methods: {
     checkTheme(theme) {
@@ -141,7 +156,17 @@ export default {
     toggleTheme() {
       this.$store.commit("theme/toggleTheme");
     },
+    handleScroll(event) {
+      if (process.browser) {
+        if (window.scrollY > this.lastYpos + this.offsetTrigger / 2)
+          this.showNavbar = false;
+        else if (window.scrollY + this.offsetTrigger < this.lastYpos)
+          this.showNavbar = true;
+      }
+      this.lastYpos = window.scrollY;
+    },
   },
+
   computed: {
     home() {
       if (this.$nuxt.$route.path == "/") {

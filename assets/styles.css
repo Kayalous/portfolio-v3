@@ -14,6 +14,10 @@
   height: 8px;
 }
 
+.vm--container::-webkit-scrollbar {
+  display: none;
+}
+
 /* Light theme scrollbar */
 
 ::-webkit-scrollbar-track {
@@ -90,7 +94,8 @@ h6 {
   font-family: "Fira Sans Extra Condensed", sans-serif;
 }
 
-a {
+a,
+.form-button {
   color: theme("colors.rose.400") !important;
   text-decoration: none !important;
   @apply relative italic no-underline;
@@ -98,20 +103,24 @@ a {
   text-shadow: 0px 0px 4px #fb7185aa;
 }
 
-a:hover {
+a:hover,
+.form-button {
   text-decoration: none !important;
   @apply no-underline brightness-95;
 }
 .dark a:hover,
-.dark a:hover > * {
+.dark a:hover > *,
+.form-button {
   @apply brightness-125;
 }
 
-a:hover > img {
+a:hover > img,
+.form-button {
   @apply brightness-90;
 }
 
-.dark a:hover > img {
+.dark a:hover > img,
+.form-button {
   @apply brightness-110;
 }
 
@@ -173,41 +182,56 @@ a:not([href*="elkayal.me"]):not(.hover-no-underline):not([href^="#"]):not([href^
   display: none !important;
 }
 
-.glass {
+.glass,
+.vm--overlay {
   transform: translate3d(0);
   background-color: #f4f4f5f5;
+}
+
+.glass:not(span):not(.glass-no-animation) {
   -webkit-animation: fade-in 1s 0.5s both cubic-bezier(0.34, 2, 0.6, 1);
   animation: fade-in 1s 0.5s both cubic-bezier(0.34, 2, 0.6, 1);
 }
 
-.dark .glass {
+.overlay-fade-in {
+  -webkit-animation: fade-in 1s both ease-in-out;
+  animation: fade-in 1s both ease-in-out;
+}
+
+.dark .glass,
+.dark .vm--overlay {
   background-color: #25283df5;
 }
 
 @supports (
   (-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px))
 ) {
-  .glass {
+  .glass,
+  .vm--overlay {
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     background-color: #f4f4f530;
   }
 
-  .dark .glass {
+  .dark .glass,
+  .dark .vm--overlay {
     background-color: #25283d50;
   }
 
-  .glass.tinted {
+  .glass.tinted,
+  .vm--overlay.tinted {
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(25px);
     background-color: #f4f4f565;
   }
 
-  .dark .glass.tinted {
+  .dark .glass.tinted,
+  .dark .vm--overlay.tinted {
     background-color: #25283da4;
   }
 
-  .glass.weak {
+  .glass.weak,
+  .vm--overlay.weak {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
   }
@@ -367,5 +391,19 @@ a:not([href*="elkayal.me"]):not(.hover-no-underline):not([href^="#"]):not([href^
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .vm--modal {
+    left: 0px !important;
+    right: 0px !important;
+  }
+  .vm--container {
+    width: 100vw !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }

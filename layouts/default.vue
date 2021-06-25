@@ -22,12 +22,12 @@
         <Nuxt class="flex-grow" />
       </transition>
       <Footer />
+      <ContactModal />
     </div>
   </div>
 </template>
 
 <script>
-import Footer from "@/components/Footer.vue";
 import "@/assets/styles.css";
 export default {
   scrollToTop: true,
@@ -39,7 +39,10 @@ export default {
     },
   },
 
-  mounted() {
+  async mounted() {
+    const globalData = await this.$content("global/global-settings").fetch();
+
+    this.$store.commit("global/setData", globalData);
     this.$store.commit("theme/getInitialTheme");
     this.setTheme();
   },

@@ -24,8 +24,9 @@
             duration-400
             ease-overstep
             active:translate-y-0.5
+            cursor-pointer
           "
-          href="mailto:aelkayal88@gmail.com"
+          @click="$modal.show('contact-form')"
         >
           <span
             class="rose-button glass transform-gpu group-hover:-translate-y-1"
@@ -40,6 +41,6 @@
 
 <script>
 export default {
-  props: ["CTA"],
+  props: ["CTA", "globalData"],
 };
 </script>

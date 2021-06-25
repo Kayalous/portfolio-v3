@@ -32,8 +32,10 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    {src: '@/plugins/particles', mode: 'client'},
+    {src: '@/plugins/particles.js', mode: 'client'},
     {src: '@/plugins/vue-js-modal.js', mode: 'client'},
+    {src: '@/plugins/validator.js', mode: 'client'},
+    {src: '@/plugins/tween-height.js', mode: 'client'},
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
