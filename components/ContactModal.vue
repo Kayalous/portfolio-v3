@@ -268,6 +268,8 @@
 <script>
 import axios from "axios";
 
+import * as qs from "query-string";
+
 export default {
   data() {
     return {
@@ -301,14 +303,16 @@ export default {
       this.loading = true;
       let vm = this;
       // Setting up the headers
-      let formData = vm.encode({
+      let formData = {
         "form-name": "contact",
         ...vm.formData,
-      });
+      };
       const axiosConfig = {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        data: formData,
+        data: qs.stringify(formData),
       };
+
+      console.log(qs.stringify(formData));
 
       // Form request
       axios
