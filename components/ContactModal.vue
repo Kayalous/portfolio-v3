@@ -6,13 +6,13 @@
       method="POST"
       data-netlify="true"
       netlify
+      hidden
       enctype="application/x-www-form-urlencoded"
     >
       <input type="hidden" name="form-name" value="contact" />
-      <input type="text" name="email" />
-      <input type="text" name="name" />
-      <input type="text" name="message" />
-      <button type="submit">Submit</button>
+      <input type="hidden" name="email" />
+      <input type="hidden" name="name" />
+      <input type="hidden" name="message" />
     </form>
 
     <client-only>
