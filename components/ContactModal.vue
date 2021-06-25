@@ -312,8 +312,6 @@ export default {
         data: qs.stringify(formData),
       };
 
-      console.log(qs.stringify(formData));
-
       // Form request
       axios
         .post("/", axiosConfig)
