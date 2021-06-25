@@ -5,13 +5,14 @@
       name="contact"
       method="POST"
       data-netlify="true"
+      netlify
       enctype="application/x-www-form-urlencoded"
-      class="hidden"
     >
       <input type="hidden" name="form-name" value="contact" />
-      <input type="hidden" name="email" />
-      <input type="hidden" name="name" />
-      <input type="hidden" name="message" />
+      <input type="text" name="email" />
+      <input type="text" name="name" />
+      <input type="text" name="message" />
+      <button type="submit">Submit</button>
     </form>
 
     <client-only>
