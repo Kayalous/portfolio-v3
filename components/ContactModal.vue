@@ -5,11 +5,13 @@
       name="contact"
       method="POST"
       data-netlify="true"
-      data-netlify-honeypot="bot-field"
       enctype="application/x-www-form-urlencoded"
       class="hidden"
     >
       <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="email" />
+      <input type="hidden" name="name" />
+      <input type="hidden" name="message" />
     </form>
 
     <client-only>
@@ -136,7 +138,6 @@
                   name="contact"
                   method="POST"
                   data-netlify="true"
-                  data-netlify-honeypot="bot-field"
                   enctype="application/x-www-form-urlencoded"
                   class="mt-10 font-josefin"
                 >
@@ -270,9 +271,9 @@ export default {
   data() {
     return {
       formData: {
-        name: "Hel ",
-        email: "OO",
-        message: "Bitsh",
+        name: "",
+        email: "",
+        message: "",
       },
       submitted: false,
       loading: false,
