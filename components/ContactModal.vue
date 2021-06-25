@@ -309,7 +309,7 @@ export default {
       };
       const axiosConfig = {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        data: qs.stringify(formData),
+        body: qs.stringify(formData),
       };
 
       // Form request
