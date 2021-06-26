@@ -31,7 +31,7 @@ content: >-
 
     First we need to choose a frontend framework with SSG to get started with. There are two popular choices in this step, those being [React](https://reactjs.org/) and [Vue](https://vuejs.org/), with each of them having separate tools to use for SSG.
 
-    Some examples for **React** based tools being:
+  Some examples for **React** based tools being:
 
   * [Next.js](https://nextjs.org/)
 
@@ -39,14 +39,19 @@ content: >-
 
   * [Hugo](https://gohugo.io/)
 
-    And some **Vue** based tools being:
+
+  And some **Vue** based tools being:
+
   * [Nuxt.js](https://nuxtjs.org/)
 
   * [Gridsome](https://gridsome.org/)
 
-    We'll be using [Nuxt.js](https://nuxtjs.org/) which is a fantastic and easy to use solution, with a lot of starter templates, an amazing community, and stellar documentation.
 
-    Next we'll be choosing a headless CMS to hold our dynamic data. There are a ***lot*** of options here too like:
+  We'll be using [Nuxt.js](https://nuxtjs.org/) which is a fantastic and easy to use solution, with a lot of starter templates, an amazing community, and stellar documentation.
+
+
+  Next we'll be choosing a headless CMS to hold our dynamic data. There are a ***lot*** of options here too like:
+
   * [Ghost](https://ghost.org/)
 
   * [Strapi](https://strapi.io/)
@@ -55,7 +60,9 @@ content: >-
 
   * [NetlifyCMS](https://www.netlifycms.org/)
 
-    We'll be using [NetlifyCMS](https://www.netlifycms.org/) which is the easiest, fastest, and cheapest solution to get started with. Being git hosted as opposed to something like Strapi which you need to host on something like Digital Ocean or Heroku, and being completely free to use with automatic, free git deployments to use with something like [Netlify](https://www.netlify.com/) or [Vercel](https://vercel.com/).
+
+  We'll be using [NetlifyCMS](https://www.netlifycms.org/) which is the easiest, fastest, and cheapest solution to get started with. Being git hosted as opposed to something like Strapi which you need to host on something like Digital Ocean or Heroku, and being completely free to use with automatic, free git deployments to use with something like [Netlify](https://www.netlify.com/) or [Vercel](https://vercel.com/).
+
 
   ## Getting started
 
