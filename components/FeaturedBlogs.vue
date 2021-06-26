@@ -14,7 +14,12 @@
       <div
         class="grid w-full grid-cols-1 mb-12 text-left  md:grid-cols-2 xl:grid-cols-3 gap-y-12"
       >
-        <BlogCard :blog="blog" v-for="blog in blogs" :key="blog.title" />
+        <BlogCard
+          :compact="true"
+          :blog="blog"
+          v-for="blog in blogs"
+          :key="blog.title"
+        />
       </div>
       <div class="flex items-center justify-center w-full">
         <nuxt-link

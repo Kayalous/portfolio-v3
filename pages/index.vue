@@ -25,7 +25,7 @@ export default {
   async created() {
     this.home = await this.$content("pages/home").fetch();
 
-    this.blogs = await this.$content("blog").limit(5).fetch();
+    this.blogs = await this.$content("blog").limit(3).fetch();
 
     this.projects = await this.$content("projects").limit(3).fetch();
 
