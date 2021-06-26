@@ -407,3 +407,16 @@ a:not([href*="elkayal.me"]):not(.hover-no-underline):not([href^="#"]):not([href^
     scrollbar-width: none;
   }
 }
+
+p > code {
+  @apply px-2 py-1 bg-gray-100 rounded-md;
+}
+
+p > code::after,
+p > code::before {
+  content: "" !important;
+}
+
+.dark p > code {
+  @apply bg-dark-theme-800;
+}
