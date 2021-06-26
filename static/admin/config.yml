@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: Kayalous/portfolio-v3
-  branch: pre-production
+  branch: main
 
 publish_mode: editorial_workflow
 
