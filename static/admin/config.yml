@@ -1,6 +1,9 @@
 backend:
-  name: proxy
-  proxy_url: http://localhost:8081/api/v1
+  name: github
+  repo: Kayalous/portfolio-v3
+  branch: pre-production
+
+publish_mode: editorial_workflow
 
 media_folder: static/img
 public_folder: /img
