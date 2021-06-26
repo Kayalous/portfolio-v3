@@ -302,19 +302,18 @@ export default {
     async submitForm() {
       this.loading = true;
       let vm = this;
-      // Setting up the headers
       let formData = {
         "form-name": "contact",
         ...vm.formData,
       };
-      const axiosConfig = {
+      const config = {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: qs.stringify(formData),
       };
 
       // Form request
-      fetch("/", axiosConfig)
+      fetch("/", config)
         .then(() => vm.success())
         .catch(() => vm.error());
     },
