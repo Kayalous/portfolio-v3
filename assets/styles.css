@@ -116,12 +116,12 @@ a:hover,
 
 a:hover > img,
 .form-button {
-  @apply brightness-90;
+  @apply brightness-95;
 }
 
 .dark a:hover > img,
 .form-button {
-  @apply brightness-110;
+  @apply brightness-105;
 }
 
 a:not(.hover-no-underline):before,
@@ -406,4 +406,29 @@ a:not([href*="elkayal.me"]):not(.hover-no-underline):not([href^="#"]):not([href^
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+}
+
+code {
+  @apply px-2 py-1 bg-gray-100 rounded-md;
+}
+
+code::after,
+code::before {
+  content: "" !important;
+}
+
+.dark code {
+  @apply bg-dark-theme-800;
+}
+
+.prose strong {
+  color: currentColor !important;
+}
+
+.prose table td > img {
+  @apply inline shadow-md;
+}
+
+.prose :is(h1, h2, h3, h4, h5, h6, thead, tr, th) {
+  color: currentColor !important;
 }

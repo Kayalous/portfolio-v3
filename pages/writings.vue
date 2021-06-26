@@ -44,7 +44,12 @@
     <div
       class="grid max-w-5xl grid-cols-1 gap-5 mx-auto  md:grid-cols-2 xl:max-w-7xl"
     >
-      <BlogCard v-for="blog in blogs" :key="blog.title" :blog="blog" />
+      <BlogCard
+        :compact="true"
+        v-for="blog in blogs"
+        :key="blog.title"
+        :blog="blog"
+      />
     </div>
   </section>
 </template>
