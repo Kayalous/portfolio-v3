@@ -7,7 +7,9 @@
       >
         Connect
       </h1>
-      <h2 class="text-6xl tracking-tight text-center">Get in touch with me</h2>
+      <h2 class="text-4xl tracking-tight text-center sm:text-6xl">
+        Get in touch with me
+      </h2>
       <div class="w-full mt-2 text-gray-600 dark:text-dark-theme-400">
         <RichText
           class="text-gray-600 2xl:text-2xl dark:text-dark-theme-400"
