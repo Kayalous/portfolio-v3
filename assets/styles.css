@@ -236,6 +236,12 @@ a:not([href*="elkayal.me"]):not(.hover-no-underline):not([href^="#"]):not([href^
     -webkit-backdrop-filter: blur(10px);
   }
 
+  .glass.weakest,
+  .vm--overlay.weakest {
+    backdrop-filter: blur(2.5px);
+    -webkit-backdrop-filter: blur(2.5px);
+  }
+
   .glass.no-tint {
     background-color: transparent;
   }
