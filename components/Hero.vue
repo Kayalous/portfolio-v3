@@ -173,7 +173,7 @@
 
 .sphere path {
   fill: transparent;
-  stroke-width: 1px;
+  stroke-width: 0.7px;
   stroke: rgba(80, 80, 80, 0);
   backface-visibility: hidden;
 }
@@ -256,7 +256,7 @@ export default {
                   anime({
                     targets: spherePathEls[i],
                     stroke: {
-                      value: ["rgba(255,75,75,1)", "rgba(80,80,80, 0)"],
+                      value: ["rgba(251,113,133,1", "rgba(80,80,80, 0)"],
                       duration: 500
                     },
                     translateX: [2, -4],
