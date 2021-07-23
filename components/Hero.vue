@@ -11,7 +11,7 @@
     "
     ref="hero"
   >
-    <div class="absolute top-0 left-0 z-0 w-screen h-full">
+    <div class="absolute top-0 left-0 z-0 w-screen h-full sphere-parent">
       <div class="animation-wrapper ">
         <div class="z-0 sphere-animation" ref="globe">
           <svg class="sphere" viewBox="0 0 440 440" stroke="rgba(80,80,80,.35)">
@@ -99,7 +99,7 @@
           class="absolute top-0 left-0 w-screen h-full opacity-0 glass weakest no-tint fade-in"
         ></div> -->
     </div>
-    <div class="container">
+    <div class="container sphere-alt">
       <div
         class="
           relative
@@ -110,6 +110,7 @@
           h-screen
           !min-h-[800px]
           px-5
+          
         "
       >
         <div>
@@ -176,15 +177,21 @@
   stroke-width: 0.7px;
   stroke: rgba(80, 80, 80, 0);
   backface-visibility: hidden;
+  transition: stroke-width 500ms cubic-bezier(0.5, 1, 0.89, 1);
 }
+
 .animation-wrapper {
-  width: 100%;
+  width: 130%;
   padding-bottom: 50%;
 }
 @media (min-width: 500px) {
-  .sphere path {
+  .sphere-parent:hover .sphere path {
     stroke-width: 0.2px;
   }
+  .sphere path {
+    stroke-width: 0.7px;
+  }
+
   .animation-wrapper {
     width: 50%;
     padding-bottom: 50%;
@@ -256,7 +263,7 @@ export default {
                   anime({
                     targets: spherePathEls[i],
                     stroke: {
-                      value: ["rgba(251,113,133,1", "rgba(80,80,80, 0)"],
+                      value: ["rgba(251,113,133,1)", "rgba(80,80,80, 0)"],
                       duration: 500
                     },
                     translateX: [2, -4],
