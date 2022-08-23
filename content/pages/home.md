@@ -11,9 +11,6 @@ bio: >-
   I'm driven by the desire to design and build delightful, pixel perfect & performant experiences on all kinds of platforms.
 
 
-  I'm currently a senior Computer Engineering student at [AAST](https://aast.edu/), and have been actively doing freelance work since 2019.
-
-
   <!--EndFragment-->
 contact: >-
   <!--StartFragment-->
