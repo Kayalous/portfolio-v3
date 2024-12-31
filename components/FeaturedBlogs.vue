@@ -12,13 +12,14 @@
         Some of my writings
       </h2>
       <div
-        class="grid w-full grid-cols-1 mb-12 text-left  md:grid-cols-2 xl:grid-cols-3 gap-y-12"
+        class="grid w-full grid-cols-1 mb-12 text-left md:grid-cols-2 xl:grid-cols-3 gap-y-12 gap-x-4"
       >
         <BlogCard
           :compact="true"
           :blog="blog"
           v-for="blog in blogs"
           :key="blog.title"
+          class="h-full flex flex-col"
         />
       </div>
       <div class="flex items-center justify-center w-full">
