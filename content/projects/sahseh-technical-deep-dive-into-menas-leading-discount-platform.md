@@ -140,17 +140,7 @@ content: >-
 
     Sahseh represents a technically sophisticated implementation of a modern coupon and savings platform. Its architecture balances performance, scalability, and maintainability while serving millions of users across the MENA region.
 
-  categories:
-    - Technical Architecture*/*category-rose
-    - Web Development*/*category-blue
-    - E-commerce*/*category-green
-  technologies:
-    - Vue.js
-    - Nuxt.js
-    - TailwindCSS
-    - TypeScript
-    - PWA
-  ---
+  
 categories:
   - Frontend*/*category-blue
   - Backend*/*category-purple
