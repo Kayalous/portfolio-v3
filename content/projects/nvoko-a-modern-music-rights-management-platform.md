@@ -183,4 +183,14 @@ content: >
   ## Conclusion
 
   Nvoko represents a technically sophisticated implementation of a modern music rights management platform. Its architecture effectively handles complex workflows while maintaining security and scalability for music industry professionals.
+categories:
+  - Backend*/*category-purple
+  - CMS*/*category-green
+  - Database*/*category-red
+  - Frontend*/*category-blue
+technologies:
+  - VueJS
+  - TailwindCSS
+  - CSS
+  - HTML
 ---
